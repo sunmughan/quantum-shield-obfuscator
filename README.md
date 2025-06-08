@@ -47,6 +47,7 @@ npm install crypto worker_threads os
 The obfuscator should now work without errors and provide significantly enhanced protection with all the recommended improvements implemented properly.
 
 ## 📁 Final Project Structure
+```plaintext
 📦 your-obfuscation-engine/
 ├── 📄 .gitignore
 ├── 📄 README.md
