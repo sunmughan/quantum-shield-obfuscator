@@ -1,27 +1,85 @@
 # 🚀 Advanced Obfuscation Engine - Usage Guide
-
 ## 📋 Quick Start
-
 ### Basic Obfuscation
-```bash
-# Auto-detect language and apply military-grade protection
-obfuscate -i myapp.js
+   ```bash
+   # Auto-detect language and apply military-grade protection
+   node cli/obfuscate.js -i myapp.js
+   # OR after npm install -g .
+   obfuscate -i myapp.js
+   ```
+
+## 📦 Installation
+   ### Local Installation
+      ```bash
+      git clone <repository>
+      cd encryption
+      npm install
+      ```
+## Global Installation
+   ```bash
+   npm install -g .
+   # Now you can use 'obfuscate' command globally
+   ```
 
 # Specify output file
-obfuscate -i source.php -o protected.php
+   ## CORRECT - Use one of these:
+   ```bash 
+   node cli/obfuscate.js -i source.php -o protected.php
+   ```
+   ## OR (if installed globally):
+   ```bash
+   npm install -g . && obfuscate -i source.php -o protected.php
+   ```
+   # Specify output file
+   ```bash 
+   node cli/obfuscate.js -i source.php -o protected.php
+   ```
 # Maximum security with all features
-obfuscate -i app.js -e military --vm-detection --self-destruct --integrity-check
-
+   ```bash
+   node cli/obfuscate.js -i app.js -e military --vm-detection --self-destruct --integrity-check
+   ```
 # Domain-locked web application
-obfuscate -i webapp.js --domain-lock "mysite.com,app.mysite.com"
-
+   ```bash 
+   node cli/obfuscate.js -i webapp.js --domain-lock "mysite.com,app.mysite.com"
+   ```
 # Time-limited trial software
-obfuscate -i trial.js --expiration "2024-12-31"
-
+   ```bash
+   node cli/obfuscate.js -i trial.js --expiration "2024-12-31"
+   ```
+# Batch Processing
+   ```bash
+   node cli/obfuscate.js --batch ./src -o ./protected
+   ```
+   ## OR (if installed globally):
+   ```bash
+   obfuscate --batch ./src -o ./protected
+   ```
 # Protect entire project
-obfuscate --batch ./src -o ./protected
-### Batch Processing
+```bash 
+node cli/obfuscate.js --batch ./src -o ./protected
 ```
+
+# Advanced Usage
+## Available Options (from CLI code):
+- -i, --input <file> - Input file to obfuscate ✅
+- -o, --output <file> - Output file for obfuscated code ✅
+- -l, --language <lang> - Programming language ✅
+- -e, --encryption-level <level> - basic|advanced|maximum|military ✅
+- -k, --key <key> - Custom encryption key ✅
+- --iterations <num> - PBKDF2 iterations ✅
+- --anti-debug - Enable anti-debugging ✅
+- --control-flow - Enable control flow obfuscation ✅
+- --dead-code - Enable dead code injection ✅
+- --string-encrypt - Enable string encryption ✅
+- --domain-lock <domains> - Comma-separated allowed domains ✅
+- --expiration <date> - Expiration date (YYYY-MM-DD) ✅
+- --self-destruct - Enable self-destruct on tampering ✅
+- --vm-detection - Enable VM/sandbox detection ✅
+- --integrity-check - Enable runtime integrity checking ✅
+- --batch <dir> - Batch process directory ✅
+- --config <file> - Configuration file path ✅
+- --verbose - Verbose output ✅
+
 
 ## 🔧 Security Levels
 Level       Protection         Performance          Use Case military 
@@ -197,52 +255,48 @@ No one will be able to bypass applications protected with this enhanced engine! 
 
 ## 💡 Advanced Usage Examples
 ### Enterprise Deployment
-```bash
-Run
+```bash 
 # Full enterprise protection with all features
-obfuscate -i enterprise-app.js \  
---encryption-level military \  
---anti-debug \  
---vm-detection \  
---self-destruct \  
---integrity-check \  
---domain-lock "company.com,app.company.com" \  
---expiration "2025-12-31" \  
--o protected-enterprise-app.js
-```
+   node cli/obfuscate.js -i enterprise-app.js \
+   --encryption-level military \
+   --anti-debug \
+   --vm-detection \
+   --self-destruct \
+   --integrity-check \
+   --domain-lock "company.com,app.company.com" \
+   --expiration "2025-12-31" \
+   -o protected-enterprise-app.js
+   ```
 ### SaaS Application Protection
-```bash
-Run
-# Multi-tenant SaaS with domain restrictions
-obfuscate -i saas-core.php \  
---encryption-level maximum \  
---domain-lock "*.saas-platform.com" \  
---anti-debug \  
---vm-detection \  
--o protected-saas-core.php
-```
+   ```bash 
+   # Multi-tenant SaaS with domain restrictions
+   node cli/obfuscate.js -i saas-core.php \
+   --encryption-level maximum \
+   --domain-lock "*.saas-platform.com" \
+   --anti-debug \
+   --vm-detection \
+   -o protected-saas-core.php
+   ```
 ### Trial Software
-```bash
-Run
-# Time-limited trial with self-destruct
-obfuscate -i trial-software.js \  
---encryption-level advanced \  
---expiration "2024-06-30" \  
---self-destruct \  
---integrity-check \  
--o trial-protected.js
-```
+   ```bash 
+   # Time-limited trial with self-destruct
+   node cli/obfuscate.js -i trial-software.js \
+   --encryption-level advanced \
+   --expiration "2024-06-30" \
+   --self-destruct \
+   --integrity-check \
+   -o trial-protected.js
+   ```
 ### Mobile App Protection
-```bash
-Run
-# Dart/Flutter mobile app
-obfuscate -i mobile-app.dart \  
---language dart \  
---encryption-level military \  
---anti-debug \  
---vm-detection \  
--o protected-mobile-app.dart
-```
+   ```bash 
+   # Dart/Flutter mobile app
+   node cli/obfuscate.js -i mobile-app.dart \
+   --language dart \
+   --encryption-level military \
+   --anti-debug \
+   --vm-detection \
+   -o protected-mobile-app.dart
+   ```
 ## 🔐 Security Architecture
 Layer 1: Pre-Processing
 - Source code analysis and preparation

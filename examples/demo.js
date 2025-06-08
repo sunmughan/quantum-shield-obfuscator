@@ -1,9 +1,9 @@
 const AdvancedObfuscator = require('../core/obfuscator');
-const fs = require('fs');
 
 // Demo script showing obfuscation capabilities
+// This example demonstrates how to use the Advanced Code Obfuscator
 const obfuscator = new AdvancedObfuscator({
-    encryptionKey: 'your-secret-key-here',
+    encryptionKey: 'demo-encryption-key-change-in-production',
     iterations: 150000
 });
 
@@ -78,26 +78,32 @@ console.log('🔐 Advanced Code Obfuscator Demo\n');
 // Obfuscate JavaScript
 console.log('📝 Obfuscating JavaScript...');
 const jsResult = obfuscator.obfuscate(jsCode, 'javascript');
-fs.writeFileSync('./examples/output/demo.obf.js', jsResult.obfuscatedCode);
-fs.writeFileSync('./examples/output/demo.js.meta', JSON.stringify(jsResult.metadata, null, 2));
 console.log('✅ JavaScript obfuscated');
+console.log(`Original size: ${jsCode.length} characters`);
+console.log(`Obfuscated size: ${jsResult.obfuscatedCode.length} characters`);
+console.log(`Size increase: ${((jsResult.obfuscatedCode.length / jsCode.length) * 100).toFixed(1)}%\n`);
 
 // Obfuscate PHP
 console.log('📝 Obfuscating PHP...');
 const phpResult = obfuscator.obfuscate(phpCode, 'php');
-fs.writeFileSync('./examples/output/demo.obf.php', phpResult.obfuscatedCode);
-fs.writeFileSync('./examples/output/demo.php.meta', JSON.stringify(phpResult.metadata, null, 2));
 console.log('✅ PHP obfuscated');
+console.log(`Original size: ${phpCode.length} characters`);
+console.log(`Obfuscated size: ${phpResult.obfuscatedCode.length} characters`);
+console.log(`Size increase: ${((phpResult.obfuscatedCode.length / phpCode.length) * 100).toFixed(1)}%\n`);
 
 // Obfuscate Dart
 console.log('📝 Obfuscating Dart...');
 const dartResult = obfuscator.obfuscate(dartCode, 'dart');
-fs.writeFileSync('./examples/output/demo.obf.dart', dartResult.obfuscatedCode);
-fs.writeFileSync('./examples/output/demo.dart.meta', JSON.stringify(dartResult.metadata, null, 2));
 console.log('✅ Dart obfuscated');
+console.log(`Original size: ${dartCode.length} characters`);
+console.log(`Obfuscated size: ${dartResult.obfuscatedCode.length} characters`);
+console.log(`Size increase: ${((dartResult.obfuscatedCode.length / dartCode.length) * 100).toFixed(1)}%\n`);
 
-console.log('\n🎉 Demo complete! Check the ./examples/output/ directory for results.');
+console.log('🎉 Demo complete!');
 console.log('\n📊 Obfuscation Statistics:');
 console.log(`JavaScript: ${jsResult.metadata.steps.length} transformation steps`);
 console.log(`PHP: ${phpResult.metadata.steps.length} transformation steps`);
 console.log(`Dart: ${dartResult.metadata.steps.length} transformation steps`);
+
+console.log('\n💡 Tip: Use the CLI tool for production obfuscation:');
+console.log('node cli/obfuscate.js <input-file> [options]');
