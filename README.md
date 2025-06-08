@@ -46,22 +46,23 @@ npm install crypto worker_threads os
 ```
 The obfuscator should now work without errors and provide significantly enhanced protection with all the recommended improvements implemented properly.
 
-## 📁 Final Project Structure:
-├── .gitignore
-├── README.md
-├── USAGE.md
-├── cli/
-│   └── obfuscate.js
-├── core/
-│   ├── QuantumShieldCipher.js
-│   └── obfuscator.js
-├── examples/
-│   └── demo.js
-├── package.json
-└── src/
-    ├── core/
-    └── processors/
-        ├── DartProcessor.dart
-        ├── JavaScriptProcessor.js
-        ├── KotlinProcessor.kt
-        └── PHPProcessor.php
+## 📁 Final Project Structure
+📦 your-obfuscation-engine/
+├── 📄 .gitignore
+├── 📄 README.md
+├── 📄 USAGE.md
+├── 📁 cli/
+│ └── 📄 obfuscate.js
+├── 📁 core/
+│ ├── 📄 QuantumShieldCipher.js
+│ └── 📄 obfuscator.js
+├── 📁 examples/
+│ └── 📄 demo.js
+├── 📄 package.json
+└── 📁 src/
+├── 📁 core/
+└── 📁 processors/
+├── 📄 DartProcessor.dart
+├── 📄 JavaScriptProcessor.js
+├── 📄 KotlinProcessor.kt
+└── 📄 PHPProcessor.php
