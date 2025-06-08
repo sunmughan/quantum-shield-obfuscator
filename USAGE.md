@@ -11,8 +11,8 @@
 ## 📦 Installation
    ### Local Installation
       ```bash
-      git clone <repository>
-      cd encryption
+git clone "https://github.com/sunmughan/quantum-shield-obfuscator.git"
+cd quantum-shield-obfuscator
       npm install
       ```
 ## Global Installation
