@@ -88,32 +88,49 @@ Level       Protection         Performance          Use Case military
 🟡          High               ⚡⚡⚡ Good             General protection, web apps basic 
 🟢          Standard           ⚡⚡⚡⚡ Fast            Simple obfuscation, development
 
-## 📊 Comprehensive Security & Feature Comparison
-Feature                 AES-256         RSA-4096        QuantumShield        IonCube     UglifyJS     Our Engine 
-Encryption Technology
-Key Space               2^256           2^4096          7^7 × ∞ (temporal)   Basic       None         Military-grade AES-256 + QuantumShield 
-Quantum Resistant       ❌              ❌             ✅                   ❌          ❌           ✅ 
-Temporal Security       ❌              ❌             ✅                   ❌          ❌           ✅ 
-Chaos Integration       ❌              ❌             ✅                   ❌          ❌           ✅ 
-Multi-Dimensional       ❌              ❌             ✅                   ❌          ❌           ✅ 
-Fractal Mathematics     ❌              ❌             ✅                   ❌          ❌           ✅ 
-Language Support 
-JavaScript              N/A             N/A             ✅                   ❌          ✅           ✅ 
-PHP                     N/A             N/A             ✅                   ✅          ❌           ✅ 
-Dart                    N/A             N/A             ✅                   ❌          ❌           ✅ 
-Kotlin                  N/A             N/A             ✅                   ❌          ❌           ✅ 
-Protection Features 
-Anti-Debug              N/A             N/A             ✅                   Limited     ❌           Advanced real-time 
-VM Detection            N/A             N/A             ✅                   ❌          ❌           ✅ 
-Self-Destruct           N/A             N/A             ✅                   ❌          ❌           ✅ 
-Domain Lock             N/A             N/A             ✅                   Basic       ❌           Advanced 
-Integrity Check         N/A             N/A             ✅                   ❌          ❌           ✅ 
-Accessibility 
-Open Source             N/A             N/A             ✅                   ❌          ✅           ✅ 
-Customizable            N/A             N/A             ✅                   Limited     Limited       Fully 
-Commercial Use          N/A             N/A             ✅                   Required    ✅            ✅
+## 🛡️ Comprehensive Security & Feature Comparison
 
-# Note: QuantumShield Cipher represents a completely new paradigm in encryption technology, combining cutting-edge mathematics, quantum principles, and chaos theory into an unprecedented security system that has never been built before!
+| Feature               | AES-256 | RSA-4096 | QuantumShield                 | IonCube      | UglifyJS     | Our Engine                             |
+|-----------------------|---------|----------|-------------------------------|--------------|--------------|----------------------------------------|
+| **Encryption Technology** |         |          |                               |              |              | Military-grade AES-256 + QuantumShield |
+| Key Space             | 2^256   | 2^4096   | 7^7 × ∞ (temporal)            | Basic        | None         |                                        |
+| Quantum Resistant     | ❌      | ❌       | ✅                             | ❌           | ❌           | ✅                                     |
+| Temporal Security     | ❌      | ❌       | ✅                             | ❌           | ❌           | ✅                                     |
+| Chaos Integration     | ❌      | ❌       | ✅                             | ❌           | ❌           | ✅                                     |
+| Multi-Dimensional     | ❌      | ❌       | ✅                             | ❌           | ❌           | ✅                                     |
+| Fractal Mathematics   | ❌      | ❌       | ✅                             | ❌           | ❌           | ✅                                     |
+
+### Language Support
+
+| Feature               | AES-256 | RSA-4096 | QuantumShield | IonCube | UglifyJS | Our Engine |
+|-----------------------|---------|----------|----------------|---------|----------|-------------|
+| JavaScript            | N/A     | N/A      | ✅              | ❌      | ✅       | ✅          |
+| PHP                   | N/A     | N/A      | ✅              | ✅      | ❌       | ✅          |
+| Dart                  | N/A     | N/A      | ✅              | ❌      | ❌       | ✅          |
+| Kotlin                | N/A     | N/A      | ✅              | ❌      | ❌       | ✅          |
+
+### Protection Features
+
+| Feature               | AES-256 | RSA-4096 | QuantumShield | IonCube | UglifyJS | Our Engine         |
+|-----------------------|---------|----------|----------------|---------|----------|---------------------|
+| Anti-Debug            | N/A     | N/A      | ✅              | Limited | ❌       | Advanced real-time  |
+| VM Detection          | N/A     | N/A      | ✅              | ❌      | ❌       | ✅                  |
+| Self-Destruct         | N/A     | N/A      | ✅              | ❌      | ❌       | ✅                  |
+| Domain Lock           | N/A     | N/A      | ✅              | Basic   | ❌       | Advanced            |
+| Integrity Check       | N/A     | N/A      | ✅              | ❌      | ❌       | ✅                  |
+
+### Accessibility
+
+| Feature        | AES-256 | RSA-4096 | QuantumShield | IonCube   | UglifyJS | Our Engine |
+|----------------|---------|----------|----------------|-----------|----------|-------------|
+| Open Source     | N/A     | N/A      | ✅              | ❌        | ✅       | ✅          |
+| Customizable    | N/A     | N/A      | ✅              | Limited   | Limited  | Fully       |
+| Commercial Use  | N/A     | N/A      | ✅              | Required  | ✅       | ✅          |
+
+---
+
+> 🔹 **Note:** *QuantumShield Cipher represents a completely new paradigm in encryption technology, combining cutting-edge mathematics, quantum principles, and chaos theory into an unprecedented security system that has never been built before!*
+
 
 ## 🛡️ Protection Features
 ### Anti-Debugging
