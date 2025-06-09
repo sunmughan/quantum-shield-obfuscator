@@ -1,6 +1,6 @@
 {
   "name": "advanced-code-obfuscator",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Ultimate Multi-Language Code Obfuscation Engine with Military-Grade Protection",
   "main": "core/obfuscator.js",
   "bin": {
@@ -23,6 +23,7 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
+    "@angular/core": "^20.0.2",
     "@babel/core": "^7.22.0",
     "@babel/generator": "^7.22.0",
     "@babel/parser": "^7.22.0",
@@ -31,8 +32,11 @@
     "commander": "^11.0.0",
     "crypto": "^1.0.1"
   },
-
   "engines": {
     "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "typescript": "^5.8.3"
   }
 }

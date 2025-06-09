@@ -268,3 +268,6 @@ test-*.obfuscated.*
 .Trashes
 ehthumbs.db
 Thumbs.db
+source.zip
+notes/RELEASE_NOTES_v3.0.0.md
+notes/CHANGELOG.md

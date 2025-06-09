@@ -47,7 +47,15 @@ class AdvancedObfuscator {
             contextAwareProtection: options.contextAwareProtection !== false,
             ...options
         };
-        this.supportedLanguages = ['javascript', 'php', 'dart', 'kotlin'];
+        this.supportedLanguages = [
+            'javascript', 'php', 'dart', 'kotlin',
+            'codeigniter', 'dotnet', 'csharp', 'c', 'cpp', 'cplusplus',
+            'java', 'golang', 'go', 'objectivec', 'objc',
+            'ionic', 'swift', 'lua', 'shell', 'bash', 'sh',
+            'zsh', 'fish', 'powershell', 'python', 'ruby',
+            'perl', 'rust', 'typescript', 'vue', 'react',
+            'angular', 'node', 'nodejs'
+        ];
         this.obfuscationMap = new Map();
         
         // Initialize advanced obfuscation engines
