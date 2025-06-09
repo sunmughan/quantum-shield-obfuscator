@@ -21,7 +21,7 @@
   },
   "include": [
     "src/**/*",
-    "test_files/**/*",
+    "examples/test_files/**/*",
     "core/**/*",
     "cli/**/*"
   ],

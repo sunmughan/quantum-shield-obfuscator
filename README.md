@@ -109,7 +109,25 @@ The obfuscator should now work without errors and provide significantly enhanced
 │   ├── 📄 SteganographicObfuscationEngine.js
 │   └── 📄 obfuscator.js
 ├── 📁 examples/
-│   └── 📄 demo.js
+│   ├── 📄 demo.js
+│   └── 📁 test_files/
+│       ├── 📄 test_BashProcessor.sh
+│       ├── 📄 test_CProcessor.c
+│       ├── 📄 test_CodeIgniterProcessor.php
+│       ├── 📄 test_CppProcessor.cpp
+│       ├── 📄 test_DartProcessor.dart
+│       ├── 📄 test_DotNetProcessor.cs
+│       ├── 📄 test_GoProcessor.go
+│       ├── 📄 test_GolangProcessor.go
+│       ├── 📄 test_IonicProcessor.ts
+│       ├── 📄 test_JavaProcessor.java
+│       ├── 📄 test_JavaScriptProcessor.js
+│       ├── 📄 test_KotlinProcessor.kt
+│       ├── 📄 test_LuaProcessor.lua
+│       ├── 📄 test_ObjectiveCProcessor.m
+│       ├── 📄 test_PHPProcessor.php
+│       ├── 📄 test_ShellProcessor.sh
+│       └── 📄 test_SwiftProcessor.swift
 ├── 📁 notes/
 │   ├── 📄 ADVANCED_FEATURES.md
 │   ├── 📄 CHANGELOG.md
@@ -134,23 +152,5 @@ The obfuscator should now work without errors and provide significantly enhanced
 │       ├── 📄 PHPProcessor.php
 │       ├── 📄 ShellProcessor.sh
 │       └── 📄 SwiftProcessor.swift
-└── 📁 test_files/
-    ├── 📄 TestClass.class
-    ├── 📄 TestClass.java
-    ├── 📄 test_BashProcessor.sh
-    ├── 📄 test_CProcessor.c
-    ├── 📄 test_CodeIgniterProcessor.php
-    ├── 📄 test_CppProcessor.cpp
-    ├── 📄 test_DartProcessor.dart
-    ├── 📄 test_DotNetProcessor.cs
-    ├── 📄 test_GoProcessor.go
-    ├── 📄 test_GolangProcessor.go
-    ├── 📄 test_IonicProcessor.ts
-    ├── 📄 test_JavaScriptProcessor.js
-    ├── 📄 test_KotlinProcessor.kt
-    ├── 📄 test_LuaProcessor.lua
-    ├── 📄 test_ObjectiveCProcessor.m
-    ├── 📄 test_PHPProcessor.php
-    ├── 📄 test_ShellProcessor.sh
-    └── 📄 test_SwiftProcessor.swift
+
 ```

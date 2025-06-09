@@ -139,7 +139,7 @@ function testProcessor(processorName, level) {
     const testFilePath = createTestFile(processorName, testContent);
     
     // Determine processor path
-    const processorPath = path.join(__dirname, 'src', 'processors', processorName);
+    const processorPath = path.join(__dirname, '..', 'src', 'processors', processorName);
     
     if (!fs.existsSync(processorPath)) {
       return {
@@ -429,7 +429,7 @@ function generateResultsFile() {
   markdown += `- Performance optimization may be needed for military-grade encryption\n`;
   
   // Write results file
-  const resultsPath = path.join(__dirname, 'notes', 'result.md');
+  const resultsPath = path.join(__dirname, '..', 'notes', 'result.md');
   fs.writeFileSync(resultsPath, markdown);
   
   console.log(`\nResults saved to: ${resultsPath}`);

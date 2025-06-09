@@ -1,6 +1,6 @@
 # Encryption Processor Testing Results
 
-**Generated:** 2025-06-09T13:07:40.285Z
+**Generated:** 2025-06-09T13:24:37.063Z
 
 ## Summary
 
@@ -15,10 +15,10 @@
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.23 | 1.96 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.17 | 3.59 | String Encryption, Dead Code |
+| basic | ✅ SUCCESS | 0.34 | 1.96 | String Encryption |
+| intermediate | ✅ SUCCESS | 0.15 | 3.59 | String Encryption, Dead Code |
 | advanced | ✅ SUCCESS | 0.20 | 7.72 | Identifier Obfuscation |
-| military | ✅ SUCCESS | 0.12 | 13.39 | Identifier Obfuscation |
+| military | ✅ SUCCESS | 0.13 | 13.39 | None |
 
 **Sample Output (military):**
 ```
@@ -91,10 +91,10 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.07 | 1.32 | String Encryption |
+| basic | ✅ SUCCESS | 0.06 | 1.32 | String Encryption |
 | intermediate | ✅ SUCCESS | 0.06 | 2.31 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.09 | 4.51 | Identifier Obfuscation |
-| military | ✅ SUCCESS | 0.11 | 7.97 | None |
+| advanced | ✅ SUCCESS | 0.12 | 4.51 | None |
+| military | ✅ SUCCESS | 0.12 | 7.97 | None |
 
 **Sample Output (military):**
 ```
@@ -129,9 +129,9 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.08 | 1.14 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.07 | 1.73 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.10 | 3.37 | None |
+| basic | ✅ SUCCESS | 0.10 | 1.14 | String Encryption |
+| intermediate | ✅ SUCCESS | 0.09 | 1.73 | String Encryption, Dead Code |
+| advanced | ✅ SUCCESS | 0.47 | 3.37 | None |
 | military | ✅ SUCCESS | 0.12 | 5.41 | None |
 
 **Sample Output (military):**
@@ -169,8 +169,8 @@ Milit...
 |-------|--------|---------------|-------------------|----------|
 | basic | ✅ SUCCESS | 0.06 | 1.25 | String Encryption |
 | intermediate | ✅ SUCCESS | 0.05 | 2.08 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.09 | 4.06 | None |
-| military | ✅ SUCCESS | 0.09 | 6.98 | None |
+| advanced | ✅ SUCCESS | 0.08 | 4.06 | None |
+| military | ✅ SUCCESS | 0.11 | 6.98 | None |
 
 **Sample Output (military):**
 ```
@@ -205,8 +205,8 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.08 | 1.18 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.05 | 1.74 | String Encryption, Dead Code |
+| basic | ✅ SUCCESS | 0.05 | 1.18 | String Encryption |
+| intermediate | ✅ SUCCESS | 0.06 | 1.74 | String Encryption, Dead Code |
 | advanced | ✅ SUCCESS | 0.09 | 3.18 | None |
 | military | ✅ SUCCESS | 0.09 | 5.14 | None |
 
@@ -244,9 +244,9 @@ Milit...
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
 | basic | ✅ SUCCESS | 0.06 | 1.94 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.05 | 3.53 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.12 | 7.32 | None |
-| military | ✅ SUCCESS | 0.09 | 12.87 | None |
+| intermediate | ✅ SUCCESS | 0.06 | 3.53 | String Encryption, Dead Code |
+| advanced | ✅ SUCCESS | 0.09 | 7.32 | None |
+| military | ✅ SUCCESS | 0.14 | 12.87 | None |
 
 **Sample Output (military):**
 ```
@@ -281,10 +281,10 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.08 | 1.73 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.06 | 2.37 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.11 | 3.94 | None |
-| military | ✅ SUCCESS | 0.10 | 6.17 | None |
+| basic | ✅ SUCCESS | 0.10 | 1.73 | String Encryption |
+| intermediate | ✅ SUCCESS | 0.07 | 2.37 | String Encryption, Dead Code |
+| advanced | ✅ SUCCESS | 0.12 | 3.94 | None |
+| military | ✅ SUCCESS | 0.11 | 6.17 | None |
 
 **Sample Output (military):**
 ```
@@ -319,10 +319,10 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.07 | 1.14 | String Encryption |
+| basic | ✅ SUCCESS | 0.06 | 1.14 | String Encryption |
 | intermediate | ✅ SUCCESS | 0.06 | 1.63 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.13 | 2.81 | None |
-| military | ✅ SUCCESS | 0.09 | 4.50 | None |
+| advanced | ✅ SUCCESS | 0.10 | 2.81 | None |
+| military | ✅ SUCCESS | 0.41 | 4.50 | None |
 
 **Sample Output (military):**
 ```
@@ -357,10 +357,10 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.06 | 1.23 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.12 | 2.01 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.08 | 3.81 | None |
-| military | ✅ SUCCESS | 0.11 | 6.51 | None |
+| basic | ✅ SUCCESS | 0.05 | 1.23 | String Encryption |
+| intermediate | ✅ SUCCESS | 0.13 | 2.01 | String Encryption, Dead Code |
+| advanced | ✅ SUCCESS | 0.10 | 3.81 | None |
+| military | ✅ SUCCESS | 0.08 | 6.51 | None |
 
 **Sample Output (military):**
 ```
@@ -395,10 +395,10 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.05 | 1.23 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.05 | 2.01 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.08 | 3.90 | None |
-| military | ✅ SUCCESS | 0.07 | 6.62 | None |
+| basic | ✅ SUCCESS | 0.07 | 1.23 | String Encryption |
+| intermediate | ✅ SUCCESS | 0.06 | 2.01 | String Encryption, Dead Code |
+| advanced | ✅ SUCCESS | 0.07 | 3.90 | None |
+| military | ✅ SUCCESS | 0.11 | 6.62 | None |
 
 **Sample Output (military):**
 ```
@@ -471,10 +471,10 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.07 | 1.18 | String Encryption |
+| basic | ✅ SUCCESS | 0.12 | 1.18 | String Encryption |
 | intermediate | ✅ SUCCESS | 0.07 | 1.59 | String Encryption, Dead Code, Control Flow |
-| advanced | ✅ SUCCESS | 0.14 | 2.55 | None |
-| military | ✅ SUCCESS | 0.10 | 3.64 | None |
+| advanced | ✅ SUCCESS | 0.11 | 2.55 | None |
+| military | ✅ SUCCESS | 0.12 | 3.64 | None |
 
 **Sample Output (military):**
 ```
@@ -509,10 +509,10 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.04 | 1.23 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.04 | 2.02 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.08 | 3.90 | Identifier Obfuscation |
-| military | ✅ SUCCESS | 0.09 | 6.63 | Identifier Obfuscation |
+| basic | ✅ SUCCESS | 0.05 | 1.23 | String Encryption |
+| intermediate | ✅ SUCCESS | 0.07 | 2.02 | String Encryption, Dead Code |
+| advanced | ✅ SUCCESS | 0.09 | 3.90 | Identifier Obfuscation |
+| military | ✅ SUCCESS | 0.07 | 6.63 | Identifier Obfuscation |
 
 **Sample Output (military):**
 ```
@@ -547,10 +547,10 @@ Milit...
 
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
-| basic | ✅ SUCCESS | 0.07 | 2.07 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.06 | 5.40 | String Encryption, Dead Code |
-| advanced | ✅ SUCCESS | 0.08 | 13.07 | None |
-| military | ✅ SUCCESS | 0.09 | 24.67 | None |
+| basic | ✅ SUCCESS | 0.06 | 2.07 | String Encryption |
+| intermediate | ✅ SUCCESS | 0.05 | 5.40 | String Encryption, Dead Code |
+| advanced | ✅ SUCCESS | 0.07 | 13.07 | None |
+| military | ✅ SUCCESS | 0.07 | 24.67 | Identifier Obfuscation |
 
 **Sample Output (military):**
 ```
@@ -586,9 +586,9 @@ Milit...
 | Level | Status | Duration (ms) | Compression Ratio | Features |
 |-------|--------|---------------|-------------------|----------|
 | basic | ✅ SUCCESS | 0.06 | 1.25 | String Encryption |
-| intermediate | ✅ SUCCESS | 0.07 | 2.09 | String Encryption, Dead Code, Control Flow |
-| advanced | ✅ SUCCESS | 0.14 | 4.01 | None |
-| military | ✅ SUCCESS | 0.14 | 6.94 | None |
+| intermediate | ✅ SUCCESS | 0.05 | 2.09 | String Encryption, Dead Code, Control Flow |
+| advanced | ✅ SUCCESS | 0.13 | 4.01 | None |
+| military | ✅ SUCCESS | 0.32 | 6.94 | None |
 
 **Sample Output (military):**
 ```
@@ -623,10 +623,10 @@ Milit...
 
 ### Performance Analysis
 
-- **basic:** Average processing time 0.08ms
+- **basic:** Average processing time 0.09ms
 - **intermediate:** Average processing time 0.07ms
-- **advanced:** Average processing time 0.10ms
-- **military:** Average processing time 0.10ms
+- **advanced:** Average processing time 0.13ms
+- **military:** Average processing time 0.14ms
 
 ### Security Features by Level
 
