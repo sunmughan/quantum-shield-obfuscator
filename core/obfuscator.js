@@ -4,6 +4,13 @@ const path = require('path');
 const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');
 const os = require('os');
 const QuantumShieldCipher = require('./QuantumShieldCipher');
+const AdversarialObfuscationEngine = require('./AdversarialObfuscationEngine');
+const HardwareBindingEngine = require('./HardwareBindingEngine');
+const FluidCodeEngine = require('./FluidCodeEngine');
+const BlockchainVerificationEngine = require('./BlockchainVerificationEngine');
+const SteganographicObfuscationEngine = require('./SteganographicObfuscationEngine');
+const GeneticAlgorithmObfuscationEngine = require('./GeneticAlgorithmObfuscationEngine');
+const ContextAwareProtectionEngine = require('./ContextAwareProtectionEngine');
 
 class AdvancedObfuscator {
     constructor(options = {}) {
@@ -30,10 +37,27 @@ class AdvancedObfuscator {
             hybridEncryption: options.hybridEncryption || true,
             keyRotationInterval: options.keyRotationInterval || 3600000,
             multiLayerKeys: options.multiLayerKeys || 5,
+            // Advanced obfuscation engine options
+            aiResistantObfuscation: options.aiResistantObfuscation !== false,
+            hardwareBinding: options.hardwareBinding !== false,
+            selfModification: options.selfModification !== false,
+            blockchainVerification: options.blockchainVerification !== false,
+            steganographicObfuscation: options.steganographicObfuscation !== false,
+            geneticAlgorithmObfuscation: options.geneticAlgorithmObfuscation !== false,
+            contextAwareProtection: options.contextAwareProtection !== false,
             ...options
         };
         this.supportedLanguages = ['javascript', 'php', 'dart', 'kotlin'];
         this.obfuscationMap = new Map();
+        
+        // Initialize advanced obfuscation engines
+        this.adversarialEngine = new AdversarialObfuscationEngine(options.adversarialOptions);
+        this.hardwareEngine = new HardwareBindingEngine(options.hardwareOptions);
+        this.fluidEngine = new FluidCodeEngine(options.fluidOptions);
+        this.blockchainEngine = new BlockchainVerificationEngine(options.blockchainOptions);
+        this.steganographicEngine = new SteganographicObfuscationEngine(options.steganographicOptions);
+        this.geneticEngine = new GeneticAlgorithmObfuscationEngine(options.geneticOptions);
+        this.contextEngine = new ContextAwareProtectionEngine(options.contextOptions);
     }
 
     generateKey() {
@@ -55,13 +79,23 @@ class AdvancedObfuscator {
             this.addRuntimeProtection.bind(this),
             this.addAdvancedAntiDebugging.bind(this),
             this.addVMDetection.bind(this),
-            this.addPolymorphicTransformation.bind(this),
-            this.addMLEvasion.bind(this),
+            // Phase 1: Context-Aware Protection (First line of defense)
+            this.applyContextAwareProtectionEngine.bind(this),
+            // Phase 2: AI-Resistant and Hardware Protection
+            this.applyAdversarialObfuscationEngine.bind(this),
+            this.applyHardwareBindingEngine.bind(this),
+            // Phase 3: Advanced Obfuscation
+            this.applyFluidCodeEngine.bind(this),
+            this.applyBlockchainVerificationEngine.bind(this),
+            this.applySteganographicObfuscationEngine.bind(this),
+            this.applyGeneticAlgorithmObfuscationEngine.bind(this),
+            // Phase 4: Traditional Obfuscation (Enhanced)
             this.tokenizeAndShuffle.bind(this),
             this.insertAdvancedDeadCode.bind(this),
             this.encryptStringsAdvanced.bind(this),
             this.obfuscateVariablesAdvanced.bind(this),
             this.addControlFlowObfuscation.bind(this),
+            // Phase 5: Final Protection
             this.addIntegrityChecks.bind(this),
             this.addDomainLocking.bind(this),
             this.addExpirationCheck.bind(this),
@@ -581,23 +615,194 @@ eval($decrypted);
     }
 
     addMLEvasion(code, language) {
-        // Analyze common reverse engineering patterns
-        const patterns = {
-            javascript: [
-                /function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/g,
-                /var\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
-                /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g
-            ],
-            php: [
-                /function\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\(/g,
-                /\$([a-zA-Z_][a-zA-Z0-9_]*)\s*=/g
-            ]
+        // Advanced AI-resistant obfuscation with adversarial patterns
+        const adversarialEngine = new AdversarialObfuscationEngine();
+        
+        // Generate patterns that fool AI deobfuscators
+        const adversarialPatterns = adversarialEngine.generateAdversarialPatterns(language);
+        let result = adversarialEngine.injectAntiAIPatterns(code, adversarialPatterns);
+        
+        // Apply pattern mutation to break ML training
+        const mutatedPatterns = adversarialEngine.evolvePatternsGenetically();
+        result = adversarialEngine.applyMutatedPatterns(result, mutatedPatterns);
+        
+        // Add noise patterns that confuse neural networks
+        result = adversarialEngine.addNeuralNetworkNoise(result, language);
+        
+        // Implement gradient-based adversarial examples
+        result = adversarialEngine.generateAdversarialExamples(result, language);
+        
+        return {
+            code: result,
+            metadata: { 
+                step: 'ai_resistant_obfuscation', 
+                adversarialPatterns: adversarialPatterns.length,
+                mutatedPatterns: mutatedPatterns.length
+            }
         };
+    }
+
+    // Hardware-based protection implementation
+    addHardwareBinding(code, language) {
+        const hardwareEngine = new HardwareBindingEngine();
         
-        let result = code;
-        const languagePatterns = patterns[language] || patterns.javascript;
+        // Generate hardware fingerprint
+        const hwFingerprint = hardwareEngine.generateHardwareFingerprint();
         
+        // Bind code to specific hardware characteristics
+        let boundCode = hardwareEngine.bindToHardware(code, hwFingerprint, language);
+        
+        // Add CPU instruction set detection
+        const cpuInstructions = hardwareEngine.detectCPUInstructions();
+        boundCode = hardwareEngine.bindToCPUInstructions(boundCode, cpuInstructions, language);
+        
+        // Add hardware validation checks
+        boundCode = hardwareEngine.addHardwareValidation(boundCode, language);
+        
+        // Add TPM/secure enclave binding if available
+        boundCode = hardwareEngine.addSecureEnclaveBinding(boundCode, language);
+        
+        return {
+            code: boundCode,
+            metadata: {
+                step: 'hardware_binding',
+                hwFingerprint: hwFingerprint.substring(0, 16) + '...',
+                cpuInstructions: cpuInstructions.length,
+                secureEnclave: hardwareEngine.hasSecureEnclave()
+            }
+        };
+    }
+
+    // Self-modifying code architecture
+    addSelfModification(code, language) {
+        const selfModEngine = new SelfModifyingEngine();
+        
+        // Create self-modifying blocks
+        const selfModifyingBlocks = selfModEngine.createSelfModifyingBlocks(code, language);
+        
+        // Create metamorphic engine
+        const metamorphicEngine = selfModEngine.createMetamorphicEngine(language);
+        
+        // Implement self-modification
+        let selfModCode = selfModEngine.implementSelfModification(code, selfModifyingBlocks, metamorphicEngine, language);
+        
+        // Add runtime code generation
+        const codeGenerators = selfModEngine.createRuntimeGenerators(language);
+        selfModCode = selfModEngine.embedRuntimeGeneration(selfModCode, codeGenerators, language);
+        
+        // Add code evolution capabilities
+        selfModCode = selfModEngine.addCodeEvolution(selfModCode, language);
+        
+        return {
+            code: selfModCode,
+            metadata: {
+                step: 'self_modification',
+                modifyingBlocks: selfModifyingBlocks.length,
+                generators: codeGenerators.length,
+                evolutionEnabled: true
+            }
+        };
+    }
+
+    // Blockchain-based verification system
+    addBlockchainVerification(code, language) {
+        const blockchainEngine = new BlockchainVerificationEngine();
+        
+        // Create blockchain validator
+        const blockchainValidator = blockchainEngine.createBlockchainValidator();
+        
+        // Generate distributed keys
+        const distributedKeys = blockchainEngine.generateDistributedKeys();
+        
+        // Embed blockchain verification
+        const verifiedCode = blockchainEngine.embedBlockchainVerification(code, blockchainValidator, distributedKeys, language);
+        
+        return {
+            code: verifiedCode,
+            metadata: {
+                step: 'blockchain_verification',
+                distributedKeys: distributedKeys.length,
+                blockchainNetwork: blockchainValidator.network
+            }
+        };
+    }
+
+    // Advanced steganographic obfuscation
+    addSteganographicObfuscation(code, language) {
+        const steganographyEngine = new SteganographyEngine();
+        
+        // Generate cover data (images, text, etc.)
+        const coverData = steganographyEngine.generateCoverData(language);
+        
+        // Embed code in cover data
+        const steganographicCode = steganographyEngine.embedInCoverData(code, coverData, language);
+        
+        // Create steganographic loader
+        const loaderCode = steganographyEngine.createSteganographicLoader(steganographicCode, language);
+        
+        // Add frequency domain hiding
+        const frequencyData = steganographyEngine.convertToFrequencyDomain(code);
+        const hiddenCode = steganographyEngine.hideInFrequencySpectrum(frequencyData);
+        const finalCode = steganographyEngine.createFrequencyLoader(hiddenCode, loaderCode, language);
+        
+        return {
+            code: finalCode,
+            metadata: {
+                step: 'steganographic_obfuscation',
+                coverDataSize: coverData.length,
+                frequencyHidden: true
+            }
+        };
+    }
+
+    // Genetic algorithm obfuscation
+    addGeneticObfuscation(code, language) {
+        const geneticEngine = new GeneticObfuscationEngine();
+        
+        // Evolve obfuscation patterns
+        const evolvedPatterns = geneticEngine.evolveObfuscationPatterns(code, language);
+        
+        // Apply evolved patterns
+        const geneticCode = geneticEngine.applyEvolvedPatterns(code, evolvedPatterns, language);
+        
+        return {
+            code: geneticCode,
+            metadata: {
+                step: 'genetic_obfuscation',
+                generations: geneticEngine.getGenerations(),
+                fitness: geneticEngine.getFitness()
+            }
+        };
+    }
+
+    // Context-aware protection
+    addContextAwareProtection(code, language) {
+        const contextEngine = new ContextAwareEngine();
+        
+        // Create context detectors
+        const contextDetectors = contextEngine.createContextDetectors(language);
+        
+        // Create adaptive protection
+        const adaptiveProtection = contextEngine.createAdaptiveProtection(language);
+        
+        // Embed context awareness
+        const contextAwareCode = contextEngine.embedContextAwareness(code, contextDetectors, adaptiveProtection, language);
+        
+        return {
+            code: contextAwareCode,
+            metadata: {
+                step: 'context_aware_protection',
+                detectors: contextDetectors.length,
+                adaptiveRules: adaptiveProtection.rules.length
+            }
+        };
+    }
+
+    addMLEvasion(code, language) {
         // Apply ML-based transformations to break pattern recognition
+        const languagePatterns = this.getLanguagePatterns(language);
+        let result = code;
+        
         for (const pattern of languagePatterns) {
             result = result.replace(pattern, (match, identifier) => {
                 if (identifier) {
@@ -613,6 +818,22 @@ eval($decrypted);
             code: result,
             metadata: { step: 'ml_evasion', patterns_processed: languagePatterns.length }
         };
+    }
+
+    getLanguagePatterns(language) {
+        const patterns = {
+            javascript: [
+                /\b(function)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(/g,
+                /\b(var|let|const)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g,
+                /\b([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*function/g
+            ],
+            php: [
+                /\bfunction\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\(/g,
+                /\$([a-zA-Z_][a-zA-Z0-9_]*)\s*=/g,
+                /\bclass\s+([a-zA-Z_][a-zA-Z0-9_]*)/g
+            ]
+        };
+        return patterns[language] || patterns.javascript;
     }
 
     generateMLObfuscatedIdentifier(original) {
@@ -1165,6 +1386,98 @@ eval($decrypted);
             code: (selfDestruct[language] || selfDestruct.javascript) + code,
             metadata: { step: 'addSelfDestruct', delay: this.options.selfDestructDelay || 300000 }
         };
+    }
+
+    // Advanced Engine Integration Methods
+    applyContextAwareProtectionEngine(code, language, options = {}) {
+        try {
+            const result = this.contextEngine.applyContextAwareProtection(code, language, options);
+            return {
+                code: result.code,
+                metadata: { step: 'contextAwareProtection', ...result.metadata }
+            };
+        } catch (error) {
+            console.warn('Context-aware protection failed:', error.message);
+            return { code, metadata: { step: 'contextAwareProtection', error: error.message } };
+        }
+    }
+
+    applyAdversarialObfuscationEngine(code, language, options = {}) {
+        try {
+            const result = this.adversarialEngine.applyAdversarialObfuscation(code, language, options);
+            return {
+                code: result.code,
+                metadata: { step: 'adversarialObfuscation', ...result.metadata }
+            };
+        } catch (error) {
+            console.warn('Adversarial obfuscation failed:', error.message);
+            return { code, metadata: { step: 'adversarialObfuscation', error: error.message } };
+        }
+    }
+
+    applyHardwareBindingEngine(code, language, options = {}) {
+        try {
+            const result = this.hardwareEngine.applyHardwareBinding(code, language, options);
+            return {
+                code: result.code,
+                metadata: { step: 'hardwareBinding', ...result.metadata }
+            };
+        } catch (error) {
+            console.warn('Hardware binding failed:', error.message);
+            return { code, metadata: { step: 'hardwareBinding', error: error.message } };
+        }
+    }
+
+    applyFluidCodeEngine(code, language, options = {}) {
+        try {
+            const result = this.fluidEngine.applyFluidArchitecture(code, language, options);
+            return {
+                code: result.code,
+                metadata: { step: 'fluidArchitecture', ...result.metadata }
+            };
+        } catch (error) {
+            console.warn('Fluid code architecture failed:', error.message);
+            return { code, metadata: { step: 'fluidArchitecture', error: error.message } };
+        }
+    }
+
+    applyBlockchainVerificationEngine(code, language, options = {}) {
+        try {
+            const result = this.blockchainEngine.applyBlockchainVerification(code, language, options);
+            return {
+                code: result.code,
+                metadata: { step: 'blockchainVerification', ...result.metadata }
+            };
+        } catch (error) {
+            console.warn('Blockchain verification failed:', error.message);
+            return { code, metadata: { step: 'blockchainVerification', error: error.message } };
+        }
+    }
+
+    applySteganographicObfuscationEngine(code, language, options = {}) {
+        try {
+            const result = this.steganographicEngine.applySteganographicObfuscation(code, language, options);
+            return {
+                code: result.code,
+                metadata: { step: 'steganographicObfuscation', ...result.metadata }
+            };
+        } catch (error) {
+            console.warn('Steganographic obfuscation failed:', error.message);
+            return { code, metadata: { step: 'steganographicObfuscation', error: error.message } };
+        }
+    }
+
+    applyGeneticAlgorithmObfuscationEngine(code, language, options = {}) {
+        try {
+            const result = this.geneticEngine.applyGeneticObfuscation(code, language, options);
+            return {
+                code: result.code,
+                metadata: { step: 'geneticObfuscation', ...result.metadata }
+            };
+        } catch (error) {
+            console.warn('Genetic algorithm obfuscation failed:', error.message);
+            return { code, metadata: { step: 'geneticObfuscation', error: error.message } };
+        }
     }
 }
 
