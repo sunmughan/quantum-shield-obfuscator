@@ -80,11 +80,10 @@ The obfuscator should now work without errors and provide significantly enhanced
 │ └── 📄 demo.js
 ├── 📄 package.json
 ├── 📁 src/
-│ ├── 📁 core/
 │ └── 📁 processors/
 │     ├── 📄 DartProcessor.dart
 │     ├── 📄 JavaScriptProcessor.js
 │     ├── 📄 KotlinProcessor.kt
 │     └── 📄 PHPProcessor.php
-└── 📁 test/
-    └── 📄 advanced-obfuscation-test.js
+└── 📄 CHANGELOG.md
+```
